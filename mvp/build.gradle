@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation deps.androidX.appcompat
+    implementation deps.androidX.constraintlayout
+    implementation deps.androidX.recyclerview
+
+    implementation deps.okhttp3X.okhttp3
+    implementation deps.okhttp3X.logging_interceptor
+
+    implementation deps.retrofitX.retrofit2
+    implementation deps.retrofitX.retrofit_converter_gson
+    implementation deps.retrofitX.retrofit2_adapter_rxjava3
+    implementation deps.retrofitX.retrofit2_rxjava_components
+
+    implementation deps.rxJavaX.rxjava3
+    implementation deps.rxJavaX.rxAndroid3
+    implementation deps.rxJavaX.rxPermissions
+    implementation deps.other.gifView
+}

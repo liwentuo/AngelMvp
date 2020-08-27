@@ -1,3 +1,5 @@
-rootProject.name='McMvp'
+rootProject.name='Mvp'
 include ':app'
-include ':mvp'
+include ':mvplib'
+include ':mvplib:libMvpAnotation:compiler'
+

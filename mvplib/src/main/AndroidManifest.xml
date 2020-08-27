@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.m.k.mvp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    
+    <application>
+
+        <provider
+            android:authorities="${applicationId}.androidx-startup"
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            tools:node="merge"
+            >
+            <meta-data android:name="com.m.k.mvp.MvpInitializer" android:value="androidx.startup"/>
+        </provider>
+
+
+
+
+        <meta-data android:name="mvpConfigPackageName" android:value="${mvpConfigPackageNameValue}"/>
+        <meta-data android:name="mvpConfigClassName" android:value="${mvpConfigClassNameValue}"/>
+        <meta-data android:name="baseUrl" android:value="${baseUrlValue}"/>
+        <meta-data android:name="appApiService" android:value="${appApiServiceValue}"/>
+        <meta-data android:name="appGSONConverter" android:value="${appGSONConverterValue}"/>
+        <meta-data android:name="appOkInterceptorPrefix" android:value="${appOkInterceptorPrefixValue}"/>
+
+
+    </application>
+</manifest>

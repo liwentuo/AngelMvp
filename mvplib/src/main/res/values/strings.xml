@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="text_click_retry">点击重试</string>
+    <string name="text_error_net">没有网络，请检查网络</string>
+    <string name="text_error_default">加载失败，请重试</string>
+</resources>

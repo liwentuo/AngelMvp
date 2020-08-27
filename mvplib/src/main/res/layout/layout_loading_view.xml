@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.m.k.mvp.widgets.MvpLoadingView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/mvp_loading_iv_gif_bg_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/mvp_loading_bg"
+        android:elevation="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cunoraz.gifview.library.GifView
+        android:id="@+id/mvp_loading_gif_view"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:elevation="18dp"
+        app:gif="@drawable/mvp_loading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/mvp_loading_tv_error_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/text_error_default" />
+
+    <Button
+        android:id="@+id/mvp_loading_btn_retry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/mvp_loading_retry_button_bg_selector"
+        android:text="@string/text_click_retry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mvp_loading_gif_view" />
+
+    <ImageView
+        android:id="@+id/mvp_loading_iv_error_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/mvp_loging_error"
+        app:layout_constraintBottom_toTopOf="@+id/mvp_loading_gif_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/mvp_loading_group_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="mvp_loading_tv_error_content,mvp_loading_btn_retry,mvp_loading_iv_error_icon" />
+
+
+</com.m.k.mvp.widgets.MvpLoadingView>
